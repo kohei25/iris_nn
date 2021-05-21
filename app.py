@@ -40,3 +40,6 @@ def predict():
     return iris_name
   else:
     return 'error'
+
+if __name__ == '__app___':
+  app.run(debug=True)
