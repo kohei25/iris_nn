@@ -41,5 +41,5 @@ def predict():
   else:
     return 'error'
 
-if __name__ == '__app___':
+if __name__ == '__app__':
   app.run(debug=True)
