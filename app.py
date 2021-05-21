@@ -22,7 +22,7 @@ def getName(label):
   else:
     return 'Error'
 
-@app.route('/', methods=['GET'])
+@app.route('/')
 def home():
   return '<h1>hello</h1>'
 
