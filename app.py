@@ -1,9 +1,11 @@
+import os
 from flask import Flask, json, request, jsonify
 import numpy as np
 import joblib
 
 app = Flask(__name__)
-app.config['DEBUG'] = True
+env_config = os.getenv("APP_SETTINGS", "config.DevelopmentConfig")
+app.config.from_object(env_config)
 
 def irisPredict(parameters):
   model = joblib.load('./nn.pkl')
