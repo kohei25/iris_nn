@@ -11,12 +11,17 @@ def irisPredict(parameters):
   curr_dir = os.path.dirname(__file__)
   file_path = curr_dir + '/nn.pkl'
   file_path_2 = './nn.pkl'
+  print('getcwd:      ', os.getcwd())
+  print('__file__:    ', __file__)
+  print('abspath:     ', os.path.abspath(__file__))
+  print('abs dirname: ', os.path.dirname(os.path.abspath(__file__)))
   print('cur_dir: ', curr_dir)
   print('file_path: ', file_path)
   print('fp_2: ', file_path_2)
-  # model = joblib.load(file_path)
-  # params = parameters.reshape(1, -1)
-  # pred = model.predict(params)
+  model = joblib.load(file_path)
+  print('model: ', model)
+  params = parameters.reshape(1, -1)
+  pred = model.predict(params)
   return file_path
 
 def getName(label):
