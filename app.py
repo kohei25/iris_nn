@@ -1,5 +1,5 @@
 import os
-from flask import Flask, json, request, jsonify
+from flask import Flask, json, request, jsonify, url_for
 import numpy as np
 import joblib
 
@@ -8,7 +8,7 @@ env_config = os.getenv("APP_SETTINGS", "config.DevelopmentConfig")
 app.config.from_object(env_config)
 
 def irisPredict(parameters):
-  model = joblib.load('nn.pkl')
+  model = joblib.load(url_for('nn.pkl'))
   print(model)
   params = parameters.reshape(1, -1)
   pred = model.predict(params)
