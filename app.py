@@ -10,11 +10,11 @@ app.config.from_object(env_config)
 def irisPredict(parameters):
   curr_dir = os.path.dirname(__file__)
   file_path = curr_dir + '/nn.pkl'
-  print(file_path)
-  model = joblib.load(file_path)
-  params = parameters.reshape(1, -1)
-  pred = model.predict(params)
-  return pred
+  # print(file_path)
+  # model = joblib.load(file_path)
+  # params = parameters.reshape(1, -1)
+  # pred = model.predict(params)
+  return file_path
 
 def getName(label):
   print(label)
