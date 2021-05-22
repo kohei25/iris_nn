@@ -8,8 +8,9 @@ env_config = os.getenv("APP_SETTINGS", "config.DevelopmentConfig")
 app.config.from_object(env_config)
 
 def irisPredict(parameters):
-  model = joblib.load(url_for('nn.pkl'))
-  print(model)
+  curr_dir = os.getcwd()
+  file_path = curr_dir + '/nn.pkl'
+  model = joblib.load(file_path)
   params = parameters.reshape(1, -1)
   pred = model.predict(params)
   return pred
