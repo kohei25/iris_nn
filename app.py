@@ -2,7 +2,7 @@ import os
 from flask import Flask, request
 import numpy as np
 import joblib
-import sklearn
+import pickle
 
 app = Flask(__name__)
 env_config = os.getenv("APP_SETTINGS", "config.DevelopmentConfig")
