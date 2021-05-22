@@ -1,7 +1,8 @@
 import os
-from flask import Flask, json, request, jsonify, url_for
+from flask import Flask, request
 import numpy as np
 import joblib
+import sklearn
 
 app = Flask(__name__)
 env_config = os.getenv("APP_SETTINGS", "config.DevelopmentConfig")
