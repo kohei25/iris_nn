@@ -23,7 +23,7 @@ def irisPredict(parameters):
   print('model: ', model)
   params = parameters.reshape(1, -1)
   pred = model.predict(params)
-  return file_path
+  return pred
 
 def getName(label):
   print(label)
