@@ -11,8 +11,9 @@ def irisPredict(parameters):
   curr_dir = os.path.dirname(__file__)
   file_path = curr_dir + '/nn.pkl'
   file_path_2 = './nn.pkl'
-  print(file_path)
-  print(file_path_2)
+  print('cur_dir: ', curr_dir)
+  print('file_path: ', file_path)
+  print('fp_2: ', file_path_2)
   # model = joblib.load(file_path)
   # params = parameters.reshape(1, -1)
   # pred = model.predict(params)
